@@ -1,3 +1,9 @@
+:root {
+    --defaultFont: sans-serif;
+    --additionalElementsColor: #e6e6e6;
+    --additionalElementsHoverColor: #c1c1c1;
+}
+
 * {
   padding: 0;
   margin: 0;

@@ -1,0 +1,39 @@
+.modal {
+  display: none;
+}
+
+.modal.active {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0000005e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__content {
+  background: #fff;
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 32px;
+  background: none;
+  height: 40px;
+  width: 40px;
+  color: var(--additionalElementsHoverColor);
+}
+
+.modal__close:hover {
+  background: var(--additionalElementsColor);
+  border-radius: 10px;
+}
