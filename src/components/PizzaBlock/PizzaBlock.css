@@ -1,0 +1,88 @@
+.pizza-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 218px;
+  align-items: center;
+}
+
+.pizza-block__image {
+  width: 95%;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.pizza-block__image:hover {
+  transform: translateY(-10px);
+}
+
+.pizza-block__name {
+  font-size: 20px;
+}
+
+.pizza-block {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.pizza-block__options {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  background: #f3f3f3;
+  padding: 7px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;  
+  width: 100%;
+}
+
+.pizza-block__options-list {
+  display: flex;
+  gap: 7px;
+}
+
+.pizza-block__options-item {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pizza-block__options-item.active {
+  background: #fff;
+  cursor: default;
+}
+
+.pizza-block__price {
+  font-size: 18px;
+}
+
+.pizza-block__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.pizza-block__add-btn {
+  flex-grow: 1;
+  padding: 10px 10px;
+}
+
+.cart__add-btn {
+  background: transparent;
+  border-radius: 7px;
+  border: 1px solid #ff5e00;
+  color: #ff5e00;
+  transition: all 0.3s ease 0s;
+  font-weight: 800;
+}
+
+.cart__add-btn:hover {
+  background: #ff5e00;
+  color: #fff;
+}

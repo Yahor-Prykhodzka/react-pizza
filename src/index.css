@@ -1,5 +1,5 @@
 :root {
-    --defaultFont: sans-serif;
+    --defaultFont: "Dodo", sans-serif;
     --additionalElementsColor: #e6e6e6;
     --additionalElementsHoverColor: #c1c1c1;
 }
@@ -91,4 +91,12 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: 400;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Dodo";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/dodo.woff2") format("woff2");
 }
