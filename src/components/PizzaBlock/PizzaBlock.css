@@ -51,6 +51,10 @@
   cursor: pointer;
 }
 
+.pizza-block__options-item:hover {
+  background: #e7e7e7;
+}
+
 .pizza-block__options-item.active {
   background: #fff;
   cursor: default;

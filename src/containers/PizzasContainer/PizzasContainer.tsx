@@ -6,14 +6,7 @@ const PizzasContainer = ({ pizzasArray }) => {
   return (
     <div className="pizzas__container">
       {pizzasArray.map((pizza) => (
-        <PizzaBlock
-          key={pizza.id}
-          name={pizza.name}
-          price={pizza.price}
-          image={pizza.imageUrl}
-          sizes={pizza.sizes}
-          types={pizza.types}
-        />
+        <PizzaBlock {...pizza}/>
       ))}
     </div>
   )

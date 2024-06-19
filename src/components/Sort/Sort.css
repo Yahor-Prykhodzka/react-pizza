@@ -1,0 +1,52 @@
+.sort {
+    font-size: 16px;
+}
+
+.sort__label {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 10px;
+}
+
+.sort__label span {
+    font-family: var(--defaultFont);
+    color: #ff5e00;
+    padding-bottom: 3px;
+    border-bottom:dashed 1.8px #ff5e00;
+    cursor: pointer;
+}
+
+.sort__popup {
+    position: absolute;
+    box-shadow: 0 2px 17px #d6d6d67d;
+    background: #fff;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sort__options {
+    display: none;
+}
+
+.sort__options.active {
+    display: block;
+}
+
+.sort__option {
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sort__option.active {
+    color: #ff5e00;
+    cursor: default;
+}
+
+.sort__option:hover {
+    color: #ff5e00;
+    background: #fff6f4;
+}

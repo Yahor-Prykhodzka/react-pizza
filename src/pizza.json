@@ -14,7 +14,7 @@
         "imageUrl":"https://media.dodostatic.net/image/r:292x292/11EF02823DBA2CB09EE4F90CBC5E227A.jpg",
         "name": "Dodo Pizza",
         "types": [0,1],
-        "sizes": [26, 30, 40],
+        "sizes": [26, 40],
         "price": 12,
         "category": 0,
         "rating": 4
@@ -34,7 +34,7 @@
         "imageUrl":"https://media.dodostatic.net/image/r:584x584/11EF0286B65F8F12A823048748DDE33D.avif",
         "name": "Munchen",
         "types": [0,1],
-        "sizes": [26, 30, 40],
+        "sizes": [26],
         "price": 10,
         "category": 0,
         "rating": 4
@@ -43,7 +43,7 @@
         "id": 5,
         "imageUrl":"https://media.dodostatic.net/image/r:292x292/11EF0285D9A4B265A7A78E39D98840B3.jpg",
         "name": "Fiesta",
-        "types": [0,1],
+        "types": [0],
         "sizes": [26, 30, 40],
         "price": 15,
         "category": 0,
