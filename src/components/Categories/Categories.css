@@ -1,18 +1,19 @@
 .categories__list {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 .categories__item {
     padding: 10px 25px;
     background: var(--additionalElementsColor);
-    border-radius: 10px;
+    border-radius: 7px;
     cursor: pointer;
 }
 
 .categories__item.active {
     background: #000;
     color: #fff;
+    pointer-events: none;
 }
 
 .categories__item:hover {
