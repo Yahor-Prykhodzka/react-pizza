@@ -1,13 +1,8 @@
 import './App.css'
-import PizzaBlock from './components/PizzaBlock/PizzaBlock'
 import PizzasContainer from './containers/PizzasContainer/PizzasContainer'
 import { Sort, Categories } from './components'
-import { useEffect, useState } from 'react'
-import PizzasService from './api/PizzasService'
 
 function App() {
-
-  const [pizzas,setPizzas] = useState([])
 
   const sortingOptions = [
     {
@@ -46,21 +41,12 @@ function App() {
     },
   ]
   
-  useEffect(() => {
-    return async () => {
-      setPizzas(await fetchPizzas())
-    }
-  }, []);
-
-  async function fetchPizzas(){
-    return await PizzasService.getAll()
-  }
 
   return (
     <>
       <Categories categoriesArray={categories} />
       <Sort sortingOptions={sortingOptions}/>
-      <PizzasContainer pizzasArray={pizzas}/>
+      <PizzasContainer />
     </>
   )
 }
