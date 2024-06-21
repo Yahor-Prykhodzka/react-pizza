@@ -1,53 +1,21 @@
 import './App.css'
-import PizzasContainer from './containers/PizzasContainer/PizzasContainer'
-import { Sort, Categories, Header } from './components'
+import Home from './pages/Home'
+import Cart from './pages/Cart'
+import NotFound from './pages/NotFound'
+import {Routes, Route} from 'react-router-dom'
+import { Header } from './components'
 
 function App() {
-  const sortingOptions = [
-    {
-      id: 0,
-      title: 'Popularity',
-      value: 'popularity',
-    },
-    {
-      id: 1,
-      title: 'Price',
-      value: 'price',
-    },
-    {
-      id: 2,
-      title: 'Alphabet',
-      value: 'alphabet',
-    },
-  ]
-
-  const categories = [
-    {
-      id: 0,
-      name: 'All',
-    },
-    {
-      id: 1,
-      name: 'Meat',
-    },
-    {
-      id: 2,
-      name: 'Vege',
-    },
-    {
-      id: 3,
-      name: 'Childern',
-    },
-  ]
+  
 
   return (
     <>
       <Header />
-      <div className="pizzas-actions container">
-        <Categories categoriesArray={categories} />
-        <Sort sortingOptions={sortingOptions} />
-      </div>
-      <PizzasContainer />
+      <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/cart' element={<Cart />}/>
+          <Route path='*' element={<NotFound />}/>
+      </Routes>
     </>
   )
 }

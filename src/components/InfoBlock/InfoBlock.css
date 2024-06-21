@@ -1,0 +1,26 @@
+.info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 50px;
+    background: #fff6f4;
+    border-radius: 20px;
+}
+
+.info__emoji {
+    font-size: 32px;
+}
+
+.info__title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.info__text {
+    text-align: center;
+    color: #878787;
+}
