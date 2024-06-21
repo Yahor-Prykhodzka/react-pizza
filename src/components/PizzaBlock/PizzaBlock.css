@@ -77,16 +77,3 @@
   padding: 10px 10px;
 }
 
-.cart__add-btn {
-  background: transparent;
-  border-radius: 7px;
-  border: 1px solid #ff5e00;
-  color: #ff5e00;
-  transition: all 0.3s ease 0s;
-  font-weight: 800;
-}
-
-.cart__add-btn:hover {
-  background: #ff5e00;
-  color: #fff;
-}

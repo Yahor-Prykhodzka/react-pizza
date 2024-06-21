@@ -22,7 +22,7 @@ const PizzasContainer = () => {
   }
   
   return (
-    <div className="pizzas__container">
+    <div className="pizzas__container container">
       {isLoading
         ? [...new Array(8)].map((item, index) => <PizzaBlockSkeleton key={index}/>)
         : pizzas.map((pizza) => <PizzaBlock key={pizza.id} {...pizza} />)}

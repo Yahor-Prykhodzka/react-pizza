@@ -26,7 +26,7 @@ const PizzaBlock = ({ id, imageUrl, price, name, sizes, types }) => {
       </div>
       <div className="pizza-block__footer">
         <span className="pizza-block__price">from {price}€</span>
-        <button className="pizza-block__add-btn cart__add-btn">Add</button>
+        <button className="pizza-block__add-btn cart__btn">Add</button>
       </div>
     </article>
   )

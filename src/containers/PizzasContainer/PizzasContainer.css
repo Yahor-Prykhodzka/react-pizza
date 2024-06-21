@@ -1,7 +1,13 @@
 .pizzas__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    justify-items:center;
     gap: 50px;
-    max-width: 1280px;
-    margin: 0 auto;
+}
+
+.pizzas-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
