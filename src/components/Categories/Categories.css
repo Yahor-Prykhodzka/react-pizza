@@ -1,6 +1,7 @@
 .categories__list {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .categories__item {

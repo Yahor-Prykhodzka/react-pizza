@@ -1,5 +1,6 @@
 .sort {
     font-size: 16px;
+    position: relative;
 }
 
 .sort__label {
@@ -24,6 +25,7 @@
     width: 200px;
     border-radius: 10px;
     overflow: hidden;
+    right: 0;
     z-index: 2;
 }
 
@@ -49,4 +51,11 @@
 .sort__option:hover {
     color: #ff5e00;
     background: #fff6f4;
+}
+
+@media (max-width:970px) {
+    .sort__popup {
+        right: unset;
+        left: 0;
+    }
 }
