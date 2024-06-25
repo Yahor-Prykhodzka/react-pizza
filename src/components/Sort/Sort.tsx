@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import './Sort.css'
 
-const Sort = ({ sortingOptions }) => {
+const Sort = ({ sortingOptions, sortId, setSortId }) => {
   const rootRef = useRef(null)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Sort = ({ sortingOptions }) => {
   }
 
   function optionClickHandler(index) {
-    setActiveSort(index)
+    setSortId(index)
     setPopupIsOpen(false)
   }
 
@@ -36,7 +36,7 @@ const Sort = ({ sortingOptions }) => {
     <div ref={rootRef} className="sort">
       <div className="sort__label">
         <b>Sort by</b>
-        <span onClick={() => togglePopup()}>{sortingOptions[activeSort].title}</span>
+        <span onClick={() => togglePopup()}>{sortingOptions[sortId].title}</span>
       </div>
       <div className="sort__popup">
         <ul className={popupIsOpen ? 'sort__options active' : 'sort__options'}>
@@ -44,7 +44,7 @@ const Sort = ({ sortingOptions }) => {
             <li
               key={option.id}
               onClick={() => optionClickHandler(index)}
-              className={activeSort == index ? 'sort__option active' : 'sort__option '}>
+              className={sortId == index ? 'sort__option active' : 'sort__option '}>
               {option.title}
             </li>
           ))}

@@ -1,14 +1,39 @@
 import React from 'react'
 import '../App.css'
+import { useState, useEffect } from 'react'
 import PizzasContainer from '../containers/PizzasContainer/PizzasContainer'
-import { Sort, Categories, } from '../components'
+import { Sort, Categories } from '../components'
+import PizzasService from '../api/PizzasService'
 
 const Home = () => {
+  const [categoryId, setCategoryId] = useState(0)
+  const [sortId, setSortId] = useState(0)
+
+  const [isLoading, setIsLoading] = useState(true)
+  const [pizzas, setPizzas] = useState([])
+
+  useEffect(() => {
+    setIsLoading(true)
+    const fetchAndSetPizzas = async () => {
+        if (categoryId == 0) {
+          setPizzas(await fetchPizzas(`?sortBy=${sortingOptions[sortId].value}`))
+        } else {
+          setPizzas(await fetchPizzas(`?category=${categoryId}&sortBy=${sortingOptions[sortId].value}`))
+        }
+        await setIsLoading(false)
+    }
+    fetchAndSetPizzas()
+  }, [categoryId, sortId])
+
+  async function fetchPizzas(params) {
+    return await PizzasService.getAll(params)
+  }
+
   const sortingOptions = [
     {
       id: 0,
       title: 'Popularity',
-      value: 'popularity',
+      value: 'rating',
     },
     {
       id: 1,
@@ -18,7 +43,7 @@ const Home = () => {
     {
       id: 2,
       title: 'Alphabet',
-      value: 'alphabet',
+      value: 'name',
     },
   ]
 
@@ -37,17 +62,21 @@ const Home = () => {
     },
     {
       id: 3,
-      name: 'Childern',
+      name: 'Spicy',
     },
   ]
 
   return (
     <>
       <div className="pizzas-actions container">
-        <Categories categoriesArray={categories} />
-        <Sort sortingOptions={sortingOptions} />
+        <Categories
+          setCategoryId={setCategoryId}
+          categoryId={categoryId}
+          categoriesArray={categories}
+        />
+        <Sort setSortId={setSortId} sortId={sortId} sortingOptions={sortingOptions} />
       </div>
-      <PizzasContainer />
+      <PizzasContainer isLoading={isLoading} pizzas={pizzas} />
     </>
   )
 }

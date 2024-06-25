@@ -2,17 +2,16 @@ import React from 'react'
 import { useState } from 'react'
 import './Categories.css'
 
-const Categories = ({ categoriesArray }) => {
-  const [activeCategory, setActiveCategory] = useState(0)
+const Categories = ({ categoriesArray, categoryId, setCategoryId }) => {
 
   return (
     <div className="categories">
       <ul className="categories__list">
         {categoriesArray.map((category, index) => (
           <li
-            onClick={()=>setActiveCategory(index)}
+            onClick={()=>setCategoryId(index)}
             key={category.id}
-            className={activeCategory == index ? 'categories__item active' : 'categories__item'}>
+            className={categoryId == index ? 'categories__item active' : 'categories__item'}>
             {category.name}
           </li>
         ))}
