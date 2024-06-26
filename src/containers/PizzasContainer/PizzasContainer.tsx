@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
 import PizzaBlock from '../../components/PizzaBlock/PizzaBlock'
 import './PizzasContainer.css'
 import PizzaBlockSkeleton from '../../components/PizzaBlock/PizzaBlockSkeleton'
